@@ -31,7 +31,7 @@ def stock():
 	stockopen = request.args.get('open')
 	stockAclose = request.args.get('Aclose')
 	stockAopen = request.args.get('Aopen')
-	print('he is', stockticker, stockclose, stockopen ,stockAclose,stockAopen,'here')
+#	print('he is', stockticker, stockclose, stockopen ,stockAclose,stockAopen,'here')
 	script = 0
 	div = 0
 	js_resources = INLINE.render_js()
@@ -52,7 +52,7 @@ def stock():
 			df['avg'] = (df['Open'] + df['Close'])/2
 			df['range'] = abs(df['Close']-df['Open'])      		
 
-			print(df.head())
+#			print(df.head())
 			w = 12*60*60*1000 
 #plot
 			fig = figure(plot_width = 800, plot_height = 600, x_axis_type = "datetime", toolbar_location = "below", tools = "crosshair, pan, wheel_zoom, box_zoom, reset", title = stockticker + ' Graph')
